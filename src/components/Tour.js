@@ -3,7 +3,7 @@ import React from "react"
 import { useState } from "react"
 
 const Tour=({tour,removeTour})=>{
-const {id,name,info,image,price}=tour
+const {ids,name,info,image,price}=tour
     const [readMore,setReadMore]=useState(false)
     return (
         <article>
@@ -13,12 +13,12 @@ const {id,name,info,image,price}=tour
                 <h4>${price}</h4>
             </div>
 
-            <p>{readMore?info:`${info.substring(0,200)}...`}
+            <p id={`tour-item-para-${id}`}>{readMore?info:`${info.substring(0,200)}...`}
                 <button onClick={()=>setReadMore(!readMore)}>{readMore?'Show Less':'ShowMore'}</button>
                 </p>
 
 
-                <button onClick={()=>removeTour(id)}>Not Intersted</button>
+                <button id={`delete-btn-${id}`} onClick={()=>removeTour(ids)}>Not Intersted</button>
         </article>
 
     )
