@@ -6,7 +6,7 @@ const Tour=({tour,removeTour})=>{
 const {ids,name,info,image,price}=tour
     const [readMore,setReadMore]=useState(false)
     return (
-        <article>
+        <article id={`tour-item-${id}`}>
             <img src={image} alt={name}/>
             <div>
                 <h4>{name}</h4>
