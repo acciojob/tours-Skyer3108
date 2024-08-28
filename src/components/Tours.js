@@ -16,7 +16,7 @@ const Tours=({tours,removeTour})=>{
             <div>
                 {
                     tours.map((tour)=>(
-                        <Tour key={tour.id} {...tour} removeTour={removeTour}/>
+                        <Tour key={tour.id} tour={tour} removeTour={removeTour}/>
                     ))
                 }
             </div>

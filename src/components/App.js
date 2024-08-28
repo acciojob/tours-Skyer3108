@@ -59,7 +59,7 @@ const App = () => {
 
   const removeTour = (id) => {
 
-    const filterTour = Tours.filter((val) => val.id !== id)
+    const filterTour = tours.filter((val) => val.id !== id)
 
     setTours(filterTour)
 
@@ -80,7 +80,7 @@ const App = () => {
       {
         loading ? <Loading /> : tours.length === 0 ? (<div>
           <h2>No Tours Left</h2>
-          <button onCanPlay={fetchTours}>Refresh</button>
+          <button onClick={fetchTours}>Refresh</button>
         </div>) : (<Tours tours={tours} removeTour={removeTour} />)
       }
 

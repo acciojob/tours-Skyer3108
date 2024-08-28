@@ -2,8 +2,8 @@
 import React from "react"
 import { useState } from "react"
 
-const Tour=({id,name,info,image,price,removeTour})=>{
-
+const Tour=({tour,removeTour})=>{
+const {id,name,info,image,price}=tour
     const [readMore,setReadMore]=useState(false)
     return (
         <article>
@@ -18,7 +18,7 @@ const Tour=({id,name,info,image,price,removeTour})=>{
                 </p>
 
 
-                <buton onClick={()=>removeTour(id)}>Not Intersted</buton>
+                <button onClick={()=>removeTour(id)}>Not Intersted</button>
         </article>
 
     )
